@@ -98,7 +98,6 @@ app.directive('autocomplete', function() {
 
     }],
     link: function(scope, element, attrs){
-        console.log(scope.noAutoSort)
 
       setTimeout(function() {
         scope.initLock = false;
@@ -222,7 +221,7 @@ app.directive('autocomplete', function() {
               }
             } else {
               if(keycode == key.enter) {
-                scope.select();
+                scope.select(scope.searchParam);
               }
             }
             scope.setIndex(-1);
